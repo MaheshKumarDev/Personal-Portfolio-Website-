@@ -1,11 +1,1050 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahesh Kumar | Creative Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #080d19;
+    --panel: #101829;
+    --panel-light: #141f33;
+    --blue: #58a6ff;
+    --white: #f4f7ff;
+    --muted: #98a6bd;
+    --border: #243149;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* NAVBAR */
+
+header {
+    border-bottom: 1px solid var(--border);
+    background: #0a1020;
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-contact {
+    border: 1px solid var(--blue);
+    padding: 9px 17px;
+    border-radius: 7px;
+    color: var(--blue) !important;
+}
+
+/* HERO */
+
+.hero {
+    padding: 90px 0 75px;
+    display: grid;
+    grid-template-columns: 1.35fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--blue);
+    background: #13233c;
+    border: 1px solid #233b5e;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 67px);
+    line-height: 1.13;
+    letter-spacing: -3px;
+    margin: 24px 0 18px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 510px;
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 19px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid var(--border);
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: #07101e;
+    border-color: var(--blue);
+}
+
+.btn-secondary {
+    color: var(--white);
+    background: var(--panel);
+}
+
+.btn:hover {
+    border-color: #8bc0ff;
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+    background: linear-gradient(145deg, #15243c, #0d1526);
+    border: 1px solid #30435f;
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+}
+
+.profile-top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 26px;
+}
+
+.avatar {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: #203c62;
+    border: 4px solid #58a6ff;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 43px;
+    font-weight: 800;
+}
+
+.profile-card h2 {
+    font-size: 23px;
+    margin-bottom: 3px;
+}
+
+.profile-card > p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.profile-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.profile-tags span {
+    background: #1b2b43;
+    border: 1px solid #2c405d;
+    color: #c9d8ef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #0d1423;
+    margin-bottom: 90px;
+}
+
+.stat {
+    padding: 24px;
+    text-align: center;
+}
+
+.stat + .stat {
+    border-left: 1px solid var(--border);
+}
+
+.stat h3 {
+    font-size: 28px;
+    color: var(--blue);
+}
+
+.stat p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* GENERAL SECTIONS */
+
+section.content-section {
+    padding: 65px 0;
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-heading .small-title {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(29px, 4vw, 40px);
+    letter-spacing: -1.5px;
+    margin-top: 7px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 8px;
+    max-width: 550px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-text, .info-box {
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.info-row {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.info-row:last-child {
+    border: 0;
+}
+
+.info-row span:first-child {
+    color: var(--muted);
+}
+
+.info-row span:last-child {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* SKILLS */
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    padding: 22px 16px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.skill .symbol {
+    color: var(--blue);
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.skill p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* SERVICES */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.service {
+    padding: 27px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.service-number {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.service h3 {
+    font-size: 18px;
+    margin: 15px 0 9px;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.project {
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.project-cover {
+    min-height: 180px;
+    display: grid;
+    place-items: center;
+    background: #142540;
+    border-bottom: 1px solid var(--border);
+    padding: 25px;
+}
+
+.project-cover.blue {
+    background: #102c43;
+}
+
+.project-cover.purple {
+    background: #24203e;
+}
+
+.project-cover.green {
+    background: #12352f;
+}
+
+.mock-window {
+    width: 100%;
+    max-width: 330px;
+    background: #09111f;
+    border: 1px solid #3b4b64;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.mock-dots {
+    color: #8398b8;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.mock-title {
+    color: #dbeafe;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.mock-line {
+    height: 6px;
+    width: 80%;
+    background: #263d5c;
+    border-radius: 5px;
+    margin: 7px 0;
+}
+
+.mock-line.short {
+    width: 52%;
+}
+
+.project-info {
+    padding: 23px;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.project-tags span {
+    background: #1b2b43;
+    padding: 4px 9px;
+    color: #b9d5ff;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+.project-link {
+    font-size: 12px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* CONTACT */
+
+.contact-panel {
+    background: linear-gradient(120deg, #142b48, #101829);
+    border: 1px solid #304866;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact-panel h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.contact-panel p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+footer {
+    margin-top: 70px;
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .navbar {
+        padding: 18px 0;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 17px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-card {
+        max-width: 430px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .stats {
+        margin-bottom: 45px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat + .stat {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .skill-grid, .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-panel {
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-panel h2 {
+        font-size: 25px;
+    }
+
+    .info-row {
+        font-size: 11px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Hello</h1>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">Mahesh<span>.</span>dev</a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="nav-contact">Let's Talk ↗</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">WEB DEVELOPER PORTFOLIO</span>
+
+                <h1>Building Digital<br>
+                    <span>Experiences.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Hi, I'm Mahesh Kumar. I create modern, responsive
+                    websites with clean code and thoughtful design.
+                    Turning ideas into useful digital experiences.
+                </p>
+
+                <div class="buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Work ↗
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-top">
+                    <span>PERSONAL PROFILE</span>
+                    <span>01 / DEV</span>
+                </div>
+
+                <!-- Replace MK with your photo if desired -->
+                <div class="avatar">MK</div>
+
+                <h2>Mahesh Kumar</h2>
+                <p>Frontend & WordPress Developer</p>
+
+                <div class="profile-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>WordPress</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>01+</h3>
+                <p>Passion for Coding</p>
+            </div>
+
+            <div class="stat">
+                <h3>06+</h3>
+                <p>Technologies Explored</p>
+            </div>
+
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Commitment to Learning</p>
+            </div>
+        </div>
+
+        <section class="content-section" id="about">
+            <div class="section-heading">
+                <span class="small-title">GET TO KNOW ME</span>
+                <h2>About <span style="color:#58a6ff">Me</span></h2>
+                <p>A little introduction about who I am and what I do.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3 style="margin-bottom:15px">
+                        Turning ideas into websites.
+                    </h3>
+
+                    <p>
+                        I'm Mahesh Kumar, a web developer interested
+                        in building attractive, responsive and
+                        user-friendly websites.
+                    </p>
+
+                    <p>
+                        I enjoy learning new technologies, solving
+                        coding problems and creating practical web
+                        projects. My goal is to keep improving my
+                        skills and deliver useful digital solutions.
+                    </p>
+
+                    <a href="#contact" class="project-link">
+                        Let's work together ↗
+                    </a>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-row">
+                        <span>Name</span>
+                        <span>Mahesh Kumar</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Profession</span>
+                        <span>Web Developer</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Main Skills</span>
+                        <span>HTML, CSS, JS</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Speciality</span>
+                        <span>Responsive Websites</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Availability</span>
+                        <span>Open to Projects</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="skills">
+            <div class="section-heading">
+                <span class="small-title">WHAT I WORK WITH</span>
+                <h2>My Technical Skills</h2>
+                <p>Tools and technologies I use to build websites.</p>
+            </div>
+
+            <div class="skill-grid">
+                <div class="skill">
+                    <div class="symbol">01</div>
+                    <h3>HTML5</h3>
+                    <p>Semantic website structure</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">02</div>
+                    <h3>CSS3</h3>
+                    <p>Layouts and responsive design</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">03</div>
+                    <h3>JavaScript</h3>
+                    <p>Website functionality</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">04</div>
+                    <h3>WordPress</h3>
+                    <p>Website building and customization</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">05</div>
+                    <h3>PHP</h3>
+                    <p>Server-side development basics</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">06</div>
+                    <h3>MySQL</h3>
+                    <p>Database fundamentals</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">07</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control and repositories</p>
+                </div>
+
+                <div class="skill">
+                    <div class="symbol">08</div>
+                    <h3>Responsive UI</h3>
+                    <p>Mobile-friendly interfaces</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="services">
+            <div class="section-heading">
+                <span class="small-title">HOW I CAN HELP</span>
+                <h2>My Services</h2>
+                <p>Website solutions for personal brands and businesses.</p>
+            </div>
+
+            <div class="service-grid">
+                <div class="service">
+                    <span class="service-number">SERVICE / 01</span>
+                    <h3>Website Development</h3>
+                    <p>
+                        Clean and responsive websites built to work
+                        across desktops, tablets and mobile devices.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <span class="service-number">SERVICE / 02</span>
+                    <h3>WordPress Websites</h3>
+                    <p>
+                        WordPress website setup, page design,
+                        customization and content layout.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <span class="service-number">SERVICE / 03</span>
+                    <h3>Landing Page Design</h3>
+                    <p>
+                        Modern landing pages for portfolios,
+                        products and small business websites.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="projects">
+            <div class="section-heading">
+                <span class="small-title">SELECTED WORK</span>
+                <h2>Featured Projects</h2>
+                <p>A selection of projects to demonstrate my development skills.</p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project">
+                    <div class="project-cover">
+                        <div class="mock-window">
+                            <div class="mock-dots">● ● ●</div>
+                            <div class="mock-title">My Portfolio</div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p>
+                            A professional portfolio website to showcase
+                            skills, services and development projects.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/MaheshKumarDev"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View on GitHub ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-cover blue">
+                        <div class="mock-window">
+                            <div class="mock-dots">● ● ●</div>
+                            <div class="mock-title">Login Portal</div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Modern Login Form</h3>
+                        <p>
+                            A clean login interface with a structured
+                            layout and responsive styling.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>UI Design</span>
+                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/MaheshKumarDev"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View on GitHub ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-cover purple">
+                        <div class="mock-window">
+                            <div class="mock-dots">● ● ●</div>
+                            <div class="mock-title">Online Test</div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Online Test System</h3>
+                        <p>
+                            A quiz interface concept for presenting
+                            questions and organizing online tests.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/MaheshKumarDev"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View on GitHub ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-cover green">
+                        <div class="mock-window">
+                            <div class="mock-dots">● ● ●</div>
+                            <div class="mock-title">Web Solutions</div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Business Website</h3>
+                        <p>
+                            A business website concept with clear
+                            content sections and a responsive layout.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Web Design</span>
+                            <span>CSS</span>
+                            <span>Responsive</span>
+                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/MaheshKumarDev"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View on GitHub ↗
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="content-section" id="contact">
+            <div class="contact-panel">
+                <div>
+                    <span class="small-title">HAVE A PROJECT?</span>
+                    <h2>Let's build something great.</h2>
+                    <p>
+                        Have a website idea? Get in touch to discuss
+                        your project and requirements.
+                    </p>
+                </div>
+
+                <a class="btn btn-primary"
+                   href="mailto:your-email@example.com">
+                    Contact Me ↗
+                </a>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <p>© 2026 Mahesh Kumar. All rights reserved.</p>
+        <p>Designed & built with HTML and CSS.</p>
+    </div>
+</footer>
+
 </body>
 </html>
